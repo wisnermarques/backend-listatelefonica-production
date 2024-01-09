@@ -17,13 +17,11 @@ module.exports = {
     client: 'mysql',
     connection: {
       host: 'srv-bd-lista.mysql.database.azure.com',
+      port: 3306,
       user: 'user_admin',
       password: 'Senac@2024',
       database: 'bd_lista',
     },
-    ssl: {
-      // Configuração específica para SSL
-      rejectUnauthorized: false, // Defina como true se o servidor MySQL usar um certificado SSL válido
-    },
+    
   },
 }
