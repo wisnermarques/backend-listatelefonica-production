@@ -63,10 +63,14 @@ const create = (request, response) => {
 }
 
 const update = (request, response) => {
-  const { nome, numero, email, endereco, dataNascimento, foto } = request.body
-  console.log(request.body)
-  
+  const { nome, numero, email, endereco, dataNascimento } = request.body
 
+  let foto = ''
+  if (request.file) {
+    const image = request.file
+    foto = image.filename
+  }
+ 
   const id = Number(request.params.id)
 
   if (!nome) {
